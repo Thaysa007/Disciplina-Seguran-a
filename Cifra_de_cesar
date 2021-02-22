@@ -1,0 +1,87 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+
+		ArrayList<String> addalfabeto= new ArrayList<String>();
+		ArrayList<String> mensagem = new ArrayList<String>();
+		
+		addalfabeto.add("a");
+		addalfabeto.add("b");
+		addalfabeto.add("c");
+		addalfabeto.add("d");
+		addalfabeto.add("e");
+		addalfabeto.add("f");
+		addalfabeto.add("g");
+		addalfabeto.add("h");
+		addalfabeto.add("i");
+		addalfabeto.add("j");
+		addalfabeto.add("k");
+		addalfabeto.add("l");
+		addalfabeto.add("m");
+		addalfabeto.add("n");
+		addalfabeto.add("o");
+		addalfabeto.add("p");
+		addalfabeto.add("q");
+		addalfabeto.add("r");
+		addalfabeto.add("s");
+		addalfabeto.add("t");
+		addalfabeto.add("u");
+		addalfabeto.add("v");
+		addalfabeto.add("w");
+		addalfabeto.add("x");
+		addalfabeto.add("y");
+		addalfabeto.add("z");
+		addalfabeto.add("a");
+		addalfabeto.add("b");
+		addalfabeto.add("c");
+		addalfabeto.add("d");
+		addalfabeto.add("e");
+		addalfabeto.add("f");
+		addalfabeto.add("g");
+		addalfabeto.add("h");
+		addalfabeto.add("i");
+		addalfabeto.add("j");
+		addalfabeto.add("k");
+		addalfabeto.add("l");
+		addalfabeto.add("m");
+		addalfabeto.add("n");
+		addalfabeto.add("o");
+		addalfabeto.add("p");
+		addalfabeto.add("q");
+		addalfabeto.add("r");
+		addalfabeto.add("s");
+		addalfabeto.add("t");
+		addalfabeto.add("u");
+		addalfabeto.add("v");
+		addalfabeto.add("w");
+		addalfabeto.add("x");
+		addalfabeto.add("y");
+		addalfabeto.add("z");
+
+		System.out.println("Qual é o seu código?");
+		String nome =scan.nextLine().toLowerCase();
+		System.out.println("Numeros de casas que você deseja andar");
+		int casasandadas =scan.nextInt();
+
+		if (casasandadas > 25) {
+			int x = casasandadas / 26;
+			for (int i = 0; i < x; i++) {
+				for (int j = 0; j < 26; j++) {
+					addalfabeto.add(addalfabeto.get(j));
+				}
+			}
+		}
+
+		for (int k = 0; k < nome.length(); k++) {
+			String L = nome.substring(k, k + 1);
+			int tamanho = addalfabeto.indexOf(L);
+			mensagem.add(addalfabeto.get(tamanho + casasandadas));
+		}
+		System.out.println(mensagem);
+
+	}
+}
